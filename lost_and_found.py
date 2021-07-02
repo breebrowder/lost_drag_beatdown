@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from time import sleep
+
 """ Text-based game that follows Hack Sprint Theme: Lost and Found """
 """ Goal: 20 scenarios; each scenario will have 3 options, at least one option must end in GAME OVER """
 """ GAME OVER: The player has died """
@@ -9,7 +10,8 @@ health_bar = 100
 battle_choices = []
 
 def start():
-    print("You are a fabulous drag queen with a purpose to fulfill!!!")
+    color = '\033[35m'
+    print(color + "You are a fabulous drag queen with a purpose to fulfill!!!")
     sleep(2)
     print("For some reason, you always lose things at the worst possible time.")
     sleep(2)
@@ -23,7 +25,7 @@ def start():
     sleep(2)
     print("You will have many decisions to make today, some will determine your death, others will determine your success.")
     sleep(2)
-    print("Ready to play? Type y or n.\n")
+    print("Ready to play? Type y or n.")
     print()
     sleep(2)
 
@@ -47,7 +49,7 @@ def wake_up():
     sleep(2)
     print("*gasp* Escandalo! It's not there!")
     sleep(2)
-    print("You quickly look under your bed and the other night stand, and alas it's not there.")
+    print("You quickly look under your bed and the other night stand, and alas it's not there!")
     sleep(2)
     print("You take some deep breaths and remind yourself you are a PROFESSIONAL.")
     sleep(2)
@@ -92,14 +94,19 @@ def bag_choice():
     print("What supplies do you need for your lewk?")
     print()
     sleep(2)
-    print("Blue bag")
+    blue = '\033[34m'
+    print(blue + "Blue bag")
     sleep(2)
-    print("Red bag")
+    red = '\033[31m'
+    print(red + "Red bag")
     sleep(2)
-    print("Yellow bag")
-    print()
+    yellow = '\033[33m'
+    print(yellow + "Yellow bag")
+    cyan = '\033[36m'
+    print(cyan + ' ')
     sleep(2)
 
+    
     users_choice.append(input("Make your decision!\n").lower())
     print()
 
@@ -309,7 +316,8 @@ def seat():
 
 def battle():
     print()
-    print("Your rival kween lost her mind. She's come for Sister Bff's wig!")
+    red = '\033[31m'
+    print(red + "Your rival kween lost her mind. She's come for Sister Bff's wig!")
     sleep(2)
     print("In your attempt to defuse the situation the library opened. You read her to filth!")
     sleep(2)
@@ -346,7 +354,7 @@ def battle():
 
 def armor():
     print()
-    print("You have your offense. Now, how are you gonna defend yo'self?")
+    print("You have your offense. Now, how are you gonna defend yourself?")
     sleep(2)
     print("Choose from the following:")
     sleep(2)
@@ -425,14 +433,16 @@ def hit_number():
     sleep(2)
     for n in range(num_hits):
         sleep(2)
-        print("Smack!")
+        black = '\033[30m'
+        print(black + "Smack!")
 
     sleep(2)
     dodge()
 
 def dodge():
     print()
-    print("Good hit girl! But you better get prepared.")
+    purple = '\033[35m'
+    print(purple + "Good hit girl! But you better get prepared.")
     sleep(2)
     print("She's comin' in hot with a baseball bat!")
     sleep(2)
@@ -551,9 +561,15 @@ def lash_quest():
                 success()
             if "blue bag" in users_choice:
                 sleep(2)
-                print("She likes your blue bag. Great style deserves great lashes.")
+                print("She likes your ", end="")
+                blue = '\033[34m'
+                purple = '\033[35m'
+                print(blue + "blue bag.")
+                print(purple + "Great style deserves great lashes.")
                 sleep(2)
                 success()
+            else:
+                game_over()
         else:
             if "unmentionables" in battle_choices:
                 sleep(2)
@@ -568,13 +584,19 @@ def lash_quest():
                 print("Just another Saturday night. She gives you her extras.")
                 sleep(2)
                 success()
+            else:
+                game_over()
     else:
         sleep(2)
         print()
         print("You might have an extra pair in your bag.")
         if "red bag" in users_choice:
             sleep(2)
-            print("No extra lashes in that red bag but... There's a pb&j in there.")
+            red = '\033[35m'
+            purple = '\033[35m'
+            print("No extra lashes in that ", end="")
+            print(red + "red bag ")
+            print(purple + "but... There's a pb&j in there.")
             sleep(2)
             print("Your rival loves a good sandwich. Bribe her!")
             sleep(2)
@@ -584,11 +606,14 @@ def lash_quest():
             game_over()
     
 def success():
-    print("You found some extra lashes! Great job!")
+    green  =  '\033[32m'
+    print (green + "You found some extra lashes! Great job!", '\033[m')
     exit()
 
 def game_over():
-    exit()
+    red =  '\033[31m'
+    print (red + "You lost", '\033[m')
+    start()
 
 if __name__ == "__main__":
     start()
