@@ -6,7 +6,6 @@
 users_choice = []
 health_bar = 100
 battle_choices = []
-num_hits = 0
 
 def start():
     print("You are a fabulous drag queen with a purpose to fulfill!!!")
@@ -176,27 +175,7 @@ def battle():
     print("In your attempt to diffuse the situation the library opened. You read her to filth.")
     print("She's lunging at your face! What do you do?")
     print("Choose your weapon wisely girl! How will you battle this beast?!")
-    print("Weapon")
-    print("Fists")
-    print("My words")
-    
-    users_choice.append(input("Make your decision!\n").lower())
 
-    if "weapon" in users_choice:
-        print("You out for blood hunty.")
-        weapon()
-
-    if "fists" in users_choice:
-        print("Finally get to use them claws.")
-        fists()
-
-    if "my words" in users_choice:
-        print("Your tongue really that sharp boo?")
-        tongue_lash()
-
-def weapon():
-    print("You want a weapon? We got some options in your {}.".format(users_choice[1]))
-    print("Here are your choices:")
     print("Pepper spray")
     print("Stiletto dagger")
     print("Brass knuckles")
@@ -259,10 +238,13 @@ def hit_number():
     print("How many times are you going to stike?")
     print("It's gotta be between 1 and 10 max.")
 
-    num_hits = int(input("Make your decision!\n"))
+    battle_choices.append(int(input("Make your decision!\n")))
+    num_hits = battle_choices[3]
 
     for n in range(num_hits):
         print("Smack!")
+
+    dodge()
 
 def dodge():
     print("Good hit girl! But you better get prepared.")
@@ -285,14 +267,77 @@ def dodge():
 
     lash_quest()
 
+# Lost and found begins
 def lash_quest():
+    print("What a battle! You got in a few good hits.")
+    print("Were you injured? How's your hair?")
+    print("Silky smooth as usual... Wait, what's wrong with your face??")
+    print("OH NO!!! You've lost a lash!")
+    print("No respectable queen performs without lashes. Or worse, just one!")
+    print("I wonder how your choices so far have affected this...")
+    print("Can you find your lashes in time for the main stage?")
+
+    if "sister bff" in users_choice:
+        print("You gave your second pair to your sister bff.")
+        print("Could you have dropped a pair while getting a snack?")
+
+        if "starbucks" in users_choice:
+            print("Retrace your steps to starbucks? Type y or n.")
+            answer = input("Make your decision!\n").lower()
+            if answer == "y":
+                print("In your mad rush to Starbucks, you got stuck in traffic and missed your performance.")
+                print("You'll never be a star now...")
+                game_over()
+
+        elif "mcdonalds" in users_choice:
+            print("You checked your car but it's not there...")
+
+        print("Who will you ask for help?")
+        print("Your rival")
+        print("Your bff")
+        print("Someone else")
+        answer = input("Make your decision!\n")
+                
+        if answer == "your bff":
+            if "sister bff" in battle_choices:
+                print("Didn't you try to use her as a human shield?")
+                print("Not cool.")
+                game_over()
+            else:
+                print("Your girl has your back too!")
+                print("She tracks down someone to find some extra lashes!")
+                success()
+        if answer == "someone else":
+            if "alley" in users_choice:
+                print("You asked a friend who you bonded with in the alley")
+                print("Trash queens unite. She had an extra pair.")
+                print("You're not sure how sanitary but take the win!")
+                success()
+            if "blue bag" in users_choice:
+                print("She likes your blue bag. Great style deserves great lashes.")
+                success()
+        else:
+            if "unmentionables" in battle_choices:
+                print("After where you hit her?? Are you crazy?")
+                game_over()
+
+            if int(battle_choices[3]) < 3:
+                print("You only hit her {} times.".format(battle_choices[3]))
+                print("Just another Saturday night. She gives you her extras.")
+                success()
+    else:
+        print("You might have an extra pair in your bag.")
+        if "red bag" in users_choice:
+            print("No extra lashes in that red bag but... There's a pb&j in there.")
+            print("Your rival loves a good sandwich. Bribe her!")
+            success()
     
+def success():
+    print("You found some extra lashes! Great job!")
+    exit()
 
 def game_over():
     exit()
 
-
 if __name__ == "__main__":
     start()
-
- 
