@@ -2,7 +2,7 @@
 
 ### HOLBERTON HACK SPRINT
 
-![](github.com/breebrowder/lost_drag_beatdown/blob/main/images/game-demo.png)
+![](https://github.com/breebrowder/lost_drag_beatdown/blob/main/images/game-demo.png)
 
 
 ## Description
