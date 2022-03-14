@@ -1,15 +1,11 @@
 # Lost Drag Beatdown
 
-## HOLBERTON HACK SPRINT- July 2, 2021
+### HOLBERTON HACK SPRINT
 
-![Patrick Star Drag Queen Meme](https://lh6.googleusercontent.com/-1arKwrs40vA/AAAAAAAAAAI/AAAAAAAAAdM/MC-cuqG6KAE/photo.jpg)
-
-
-## THEME: LOST AND FOUND
 
 ## Description
 
-This is a simple, interactive, and easy to use adventure game built entirely in Python. Tasked to us by Holberton School, we have created this interesting journey taken by a drag queen who just wants to have the most fabulous lashes in the room. Game is played entirely in the terminal by the user.
+This is a simple, interactive, and easy to use adventure game built entirely in Python. Tasked to us by Holberton School, and given a theme of "Lost and Found", we have created this interesting journey taken by a drag queen who just wants to have the most fabulous lashes in the room. Game is played entirely in the terminal by the user.
 
 Lost and Found Drag Beatdown is a text-based adventure game. You (yes, you!) are a drag queen getting ready for a performance. To slay at your performance, you'll have to make a lot of decisions. Each of your choices decides your fate!
 
@@ -20,7 +16,7 @@ Will you make it to the performance on time? Will you put together a winning per
 You want to play? It's easy! Just git clone into your local machine and execute.
 
 ```
-git clone git@github.com:breezybrow/lost_drag_beatdown.git
+git clone git@github.com:breebrowder/lost_drag_beatdown.git
 ./lost_drag_beatdown.py
 ```
 
@@ -54,11 +50,13 @@ y
 - Clicking rather than typing responses
 - try-catch statements to ensure game continues/prompts for proper response
 
+[Click to view our Design Process](https://docs.google.com/presentation/d/1IoefVj-amq4SfYdd74CEUc1VBmBIwoskYpjHUNZyGNE/edit?usp=sharing)
+
 ## Authors
 
-Lonzo Rust - [Github](https://github.com/lonzor)
-Rachel Lewis - [GitHub](https://github.com/rlewis11769)
-Bree Browder - [Github](https://github.com/breezybrow)
+1. Lonzo Rust - [Github](https://github.com/lonzor)
+2. Rachel Lewis - [GitHub](https://github.com/rlewis11769)
+3. Bree Browder - [Github](https://github.com/breezybrow)
 
 ## Bugs
 
@@ -67,3 +65,18 @@ Each response must be fully typed out. If answers are not entered correctly, gam
 It's possible our formatting isn't consistent.
 
 Please report any bugs or issues encountered while playing this game directly to the authors listed above.
+
+## About the Developer  💬
+
+### Bree Browder
+
+Bree is known for her creativity, organization, and self awareness. Advances in technology have played an integral part in her life. As an empathy-driven problem solver, Bree wants to be at the forefront of design for products, and to continuously design with others in mind, especially those who tend to be marginalized or forgotten.
+
+### Follow Me
+
+- 📁 [LinkedIn](https://www.linkedin.com/in/breebrowder/)
+- ✍️ [Medium](https://medium.com/@breebrowder)
+- 🖥️ [Portfolio Website](https://breebrowder.github.io)
+
+### Email Me
+📩: browder.bree@gmail.com
